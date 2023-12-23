@@ -1,0 +1,24 @@
+
+@font-face {
+  font-family: 'TikTokFont';
+  src: url('assets/TikTokFont-Regular.woff2'), format
+  ('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'TikTokFont';
+  src: url('assets/TikTokFont-Semibold.woff2'), format
+  ('woff2');
+  font-weight: 600;
+}
+
+body {
+  margin: 0;
+  font-family: 'TikTokFont';
+}
+
+
+
+
+

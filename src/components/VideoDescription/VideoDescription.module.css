@@ -1,0 +1,57 @@
+.album {
+    animation: rotate 4s infinite linear;
+    background: url('/assets/VynilBack.png');
+    display: flex;
+    border-radius: 100%;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+}
+
+.albumImage {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.description {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    color: #fff;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.author {
+   font-weight: 600;
+   color: #fff;
+   text-decoration: none;
+   font-size: 17px;
+}
+
+.text {
+    margin-top: 4px;
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+.textWrapper {
+    max-width: 275px;
+    padding-right: 32px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    
+    to {
+       transform: rotate(360deg); 
+    }
+}

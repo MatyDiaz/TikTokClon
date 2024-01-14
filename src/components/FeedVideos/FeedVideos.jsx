@@ -10,7 +10,7 @@ const videos = [
         comments: '333',
         songTitle:'Original Sound - zzerok1',
         // albumCover:'https://p16-amd-va.tiktokcdn.com/img/tos-useast2a-v-2774/284edddd2f3745dc9f655448ecd8a39c~c5_100x100.jpeg',
-        albumCover:'C:/Users/Usuario/Desktop/Proyectos/TikTokClon/assets/SkateAlbum.jpeg',
+        albumCover:'../../../assets/SkateAlbum.jpeg',
         src: '../../../assets/pexels_videos_2791956 (2160p).mp4'
     },
     {
@@ -22,7 +22,7 @@ const videos = [
         comments: '112',
         songTitle:'Luis Alberto Spinetta - Cancion para los dias de la vida',
         // albumCover:'https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/e534e121316f07c53d1d3ed63d505000.jpeg?lk3s=a5d48078&x-expires=1704549600&x-signature=2EM0%2Bj7nq3NVZQYEKs3Ih8%2B5IiE%3D',
-        albumCover:'C:/Users/Usuario/Desktop/Proyectos/TikTokClon/assets/ArtAlbum.jpeg',
+        albumCover: '../../../assets/ArtAlbum.jpeg',
         src:'../../../assets/production_id_3804810 (2160p).mp4'
     },
     {
@@ -34,7 +34,7 @@ const videos = [
         comments: '25',
         songTitle:'DuaLipa - Happy Horse Song',
         // albumCover:'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/28f10ce782e673d0a644582d61431b45~c5_100x100.jpeg?lk3s=a5d48078&x-expires=1704546000&x-signature=Kuu%2FOezFDNZOZ0piUrq0rte07y0%3D',
-        albumCover: 'C:/Users/Usuario/Desktop/Proyectos/TikTokClon/assets/RobleisAlbum.jpeg',
+        albumCover: '../../../assets/RobleisAlbum.jpeg',
         src:'../../../assets/production_id_3997798 (2160p).mp4'
     }
 ]

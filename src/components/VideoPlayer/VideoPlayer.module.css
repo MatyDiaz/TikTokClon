@@ -28,14 +28,20 @@
 
 .actions {
     position: absolute;
-    bottom: 16px;
-    right: 16px;
+    bottom: 140px;
+    right: 8px;
+    z-index: 1;
 }
 
 .action {
     color: #ffff;
+    background: transparent;
+    border: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 15px;
+    text-align: center;
     align-items: center;
 }
+

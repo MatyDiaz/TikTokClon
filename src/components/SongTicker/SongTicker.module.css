@@ -1,0 +1,20 @@
+.musicIcon {
+    
+    left: 0px;
+    top: 50%;
+
+    background-image: url(../../../assets/NotaMusical.png);
+    /* background-image: url(https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok/webapp/main/webapp-mobile/1f379b3….png); */
+    background-size: 13px 13px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    width: 15px;
+    height: 15px;
+}
+
+.song {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    align-items: center;
+}

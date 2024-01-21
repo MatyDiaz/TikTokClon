@@ -5,7 +5,7 @@ import  clsx  from 'clsx';
 import VideoPlayerActions from './VideoPlayerActions';
 import VideoDescription from '../VideoDescription/VideoDescription';
 
-export default function VideoPlayer ({description ,author, albumCover, src}) {
+export default function VideoPlayer ({description ,author, albumCover, src, songTitle}) {
 
     const [playing, setPlaying] = useState(false);
 
@@ -40,6 +40,7 @@ export default function VideoPlayer ({description ,author, albumCover, src}) {
                 albumCover = {albumCover}
                 author = {author}
                 description={description}
+                songTitle={songTitle}
             />
         </div>
     )

@@ -1,23 +1,19 @@
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
 import src from '../../../assets/pexels_videos_2791956 (2160p).mp4';
 import style from './VideoPlayer.module.css';
 import  clsx  from 'clsx';
 import VideoPlayerActions from './VideoPlayerActions';
 import VideoDescription from '../VideoDescription/VideoDescription';
+import useIntesectionVideoPlayer from '../../hooks/useIntesectionVideoPlayer';
 
-export default function VideoPlayer ({description ,author, albumCover, src, songTitle}) {
 
-    const [playing, setPlaying] = useState(false);
-
+export default function VideoPlayer ({description ,username, avatar, albumCover, src, songTitle}) {
+    //console.log(src);
+   
     const video = useRef(null);
+    
+    const {playing, handlePlay} = useIntesectionVideoPlayer({video})
 
-    const handlePlay = () => {
-        playing? 
-        video.current.pause()
-        :video.current.play()
-
-        setPlaying(!playing);
-    }
 
     const playerClassName = clsx (style.player, {
         [style.hidden] : playing
@@ -27,6 +23,7 @@ export default function VideoPlayer ({description ,author, albumCover, src, song
         <div className={style.wrapper} >
             <video 
                 src= {src} 
+                //src='https://www.pexels.com/video/2499611/'
                 controls={false} 
                 loop
                 className={style.video}
@@ -35,10 +32,13 @@ export default function VideoPlayer ({description ,author, albumCover, src, song
             />
             <i className={playerClassName} onClick={handlePlay}  />
             {/* <i className={playing? style.hidden : style.player} onClick={handlePlay}  /> */}
-            <VideoPlayerActions/>
+            <VideoPlayerActions
+                username={username}
+                avatar={avatar}
+            />
             <VideoDescription
                 albumCover = {albumCover}
-                author = {author}
+                username = {username}
                 description={description}
                 songTitle={songTitle}
             />

@@ -1,9 +1,10 @@
 import { Heart } from "../Icons/Heart";
 import { Comment } from "../Icons/Comment";
 import { Share } from "../Icons/Share";
+import { RedButton } from "../Icons/RedButton";
 import style from './VideoPlayer.module.css';
 
-export default function VideoPlayerActions ({likes = 12, comments = 35, shares = 25}) {
+export default function VideoPlayerActions ({likes = 12, comments = 35, shares = 25, username, avatar}) {
 
     const handleLike = () => {
         alert('Like!')
@@ -15,8 +16,15 @@ export default function VideoPlayerActions ({likes = 12, comments = 35, shares =
         alert('Share!')
     };
 
+    //console.log(avatar);
+
     return (
         <aside className={style.actions}>
+            <div className={style.user}>
+                <img alt={username} src={avatar}/>
+                <RedButton/>
+            </div>
+
             <button onClick={handleLike} className={style.action}>
                 <Heart/>
                 <span title='like' >{likes}</span>

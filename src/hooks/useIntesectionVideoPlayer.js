@@ -24,7 +24,7 @@ export default function useIntesectionVideoPlayer ({video}) {
 
     const [playing, setPlaying] = useState(false);
 
-    console.log('useIntersectionVideoPlayer');
+    //console.log('useIntersectionVideoPlayer');
 
     useEffect(()=>{
 

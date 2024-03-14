@@ -4,7 +4,7 @@ import { Share } from "../Icons/Share";
 import { RedButton } from "../Icons/RedButton";
 import style from './VideoPlayer.module.css';
 
-export default function VideoPlayerActions ({likes = 12, comments = 35, shares = 25, username, avatar}) {
+export default function VideoPlayerActions ({avatar, likes, comments, shares, username}) {
 
     const handleLike = () => {
         alert('Like!')

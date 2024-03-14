@@ -1,13 +1,19 @@
 import React from 'react'
 import './App.css'
-import VideoPlayer from './components/VideoPlayer/VideoPlayer'
+import {Route} from 'wouter'
 import FeedVideos from './components/FeedVideos/FeedVideos'
+import UploadVideo from './pages/Upload/Upload.jsx'
 
 function App() {
   return (
     <div className='App'>
       <main>
-        <FeedVideos/>
+        <Route path='/'>
+          <FeedVideos/>
+        </Route>
+        <Route path='/uploadVideo'>
+          <UploadVideo/>
+        </Route>
       </main>
     </div>
   )

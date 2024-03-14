@@ -7,7 +7,7 @@ import VideoDescription from '../VideoDescription/VideoDescription';
 import useIntesectionVideoPlayer from '../../hooks/useIntesectionVideoPlayer';
 
 
-export default function VideoPlayer ({description ,username, avatar, albumCover, src, songTitle}) {
+export default function VideoPlayer (props) {
     //console.log(src);
    
     const video = useRef(null);
@@ -19,11 +19,13 @@ export default function VideoPlayer ({description ,username, avatar, albumCover,
         [style.hidden] : playing
     })
 
+    const {src} = props
+
     return (
         <div className={style.wrapper} >
             <video 
                 src= {src} 
-                //src='https://www.pexels.com/video/2499611/'
+                //src='https://ctinhqqaqmuxapdaxgox.supabase.co/storage/v1/object/public/Videos/uploads/c719d3c6-9eaa-44a4-8aac-1a82e876d775.mp4'
                 controls={false} 
                 loop
                 className={style.video}
@@ -32,16 +34,8 @@ export default function VideoPlayer ({description ,username, avatar, albumCover,
             />
             <i className={playerClassName} onClick={handlePlay}  />
             {/* <i className={playing? style.hidden : style.player} onClick={handlePlay}  /> */}
-            <VideoPlayerActions
-                username={username}
-                avatar={avatar}
-            />
-            <VideoDescription
-                albumCover = {albumCover}
-                username = {username}
-                description={description}
-                songTitle={songTitle}
-            />
+            <VideoPlayerActions {...props} />
+            <VideoDescription {...props} />
         </div>
     )
 };

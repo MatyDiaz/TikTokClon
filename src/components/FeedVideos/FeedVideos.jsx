@@ -50,6 +50,7 @@ export default function FeedVideos () {
         getVideos().then(([error, videos])=>{
             //console.log(videos);
             if(error) return setError(error)
+            //console.log(videos);
             setVideos(videos);
         })
     },[])
